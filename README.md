@@ -21,13 +21,13 @@ A CLI tool to manage Cloudflare proxy settings for your DNS records. Easily enab
 No installation required! Just run:
 
 ```bash
-npx disable-cloudflare
+npx disable-cloudflare@latest
 ```
 
 ### Global installation
 
 ```bash
-npm install -g disable-cloudflare
+npm install -g disable-cloudflare@latest
 ```
 
 Then run:
