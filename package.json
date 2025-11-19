@@ -8,10 +8,13 @@
     "dev": "bun --watch index.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "eslint": "9.39.1",
+    "neostandard": "0.12.2",
+    "prettier": "3.6.2"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "5"
   },
   "dependencies": {
     "@clack/prompts": "0.11.0",
