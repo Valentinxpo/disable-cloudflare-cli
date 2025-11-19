@@ -1,19 +1,42 @@
 {
   "name": "disable-cloudflare",
-  "module": "index.ts",
+  "version": "0.0.1",
+  "description": "CLI tool to manage Cloudflare proxy settings for your DNS records",
   "type": "module",
-  "private": true,
+  "bin": {
+    "disable-cloudflare": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "cloudflare",
+    "dns",
+    "proxy",
+    "cli",
+    "cloudflare-proxy"
+  ],
+  "author": "midudev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/midudev/disable-cloudflare-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/midudev/disable-cloudflare-cli/issues"
+  },
+  "homepage": "https://github.com/midudev/disable-cloudflare-cli#readme",
   "scripts": {
     "start": "bun run index.ts",
-    "dev": "bun --watch index.ts"
+    "dev": "bun --watch index.ts",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "eslint": "9.39.1",
     "neostandard": "0.12.2",
-    "prettier": "3.6.2"
-  },
-  "peerDependencies": {
+    "prettier": "3.6.2",
     "typescript": "5"
   },
   "dependencies": {
