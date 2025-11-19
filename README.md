@@ -1,100 +1,152 @@
 # Cloudflare Proxy Manager
 
-Una aplicación CLI para gestionar el proxy de Cloudflare en tus proyectos, permitiéndote desactivar el reverse proxy para que el tráfico vaya directamente al host original.
+A CLI tool to manage Cloudflare proxy settings for your DNS records. Easily enable or disable Cloudflare proxy (orange cloud) for your domains.
 
-## Características
+## Features
 
-- 📋 Lista todos tus proyectos activos en Cloudflare
-- 🔍 Muestra todos los registros DNS con proxy activo
-- ✅ Selección múltiple de registros a desactivar
-- 🚀 Interfaz interactiva con @clack/prompts
-- ⚡ Rápido y eficiente con Bun
+- 📋 List all your active Cloudflare zones
+- 🔍 View all DNS records with their proxy status
+- 🌐 Visual indicators showing which domains are proxied
+- ✅ Multi-select records to enable/disable proxy
+- 🚀 Interactive interface with @clack/prompts
+- 🌍 Automatic language detection (English/Spanish)
+- ⚡ Fast and efficient
 
-## Requisitos previos
+## Installation
 
-- [Bun](https://bun.sh) instalado
-- Token de API de Cloudflare con permisos de lectura y edición de DNS
+### Using npx (recommended)
 
-## Configuración
+No installation required! Just run:
 
-1. Instala las dependencias:
+```bash
+npx disable-cloudflare
+```
+
+### Global installation
+
+```bash
+npm install -g disable-cloudflare
+```
+
+Then run:
+
+```bash
+disable-cloudflare
+```
+
+## Prerequisites
+
+- Node.js 18 or higher
+- Cloudflare API Token with DNS edit permissions
+
+## Configuration
+
+Set your Cloudflare API token as an environment variable:
+
+```bash
+export CLOUDFLARE_TOKEN="your_cloudflare_token"
+```
+
+Or create a `.env` file in your project:
+
+```bash
+CLOUDFLARE_TOKEN="your_cloudflare_token"
+```
+
+### How to get your Cloudflare token
+
+1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/profile/api-tokens)
+2. Click "Create Token"
+3. Use the "Edit zone DNS" template or create a custom one with:
+   - Zone > DNS > Edit
+   - Zone > Zone > Read
+4. Copy the generated token and set it as the `CLOUDFLARE_TOKEN` environment variable
+
+## Usage
+
+Simply run:
+
+```bash
+npx disable-cloudflare
+```
+
+The CLI will guide you through:
+
+1. Selecting a Cloudflare zone/project
+2. Choosing whether to enable or disable proxy
+3. Selecting which DNS records to modify
+4. Confirming the changes
+
+## What does it do?
+
+When you disable Cloudflare proxy on a DNS record:
+
+- Traffic no longer goes through Cloudflare servers
+- Your server's real IP is exposed
+- You lose Cloudflare's DDoS protection and CDN
+- The DNS record works as traditional DNS (DNS only)
+
+This is useful when you need to:
+
+- Connect services that require direct IP access
+- Debug network issues
+- Use special configurations incompatible with proxy
+
+⚠️ Note that changes may take a few minutes to propagate.
+
+## Development
+
+### Local development
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/midudev/disable-cloudflare-cli.git
+cd disable-cloudflare-cli
+```
+
+2. Install dependencies:
 
 ```bash
 bun install
 ```
 
-2. Crea un archivo `.env` en la raíz del proyecto:
-
-```bash
-CLOUDFLARE_TOKEN="tu_token_de_cloudflare"
-```
-
-### Cómo obtener tu token de Cloudflare
-
-1. Ve a [Cloudflare Dashboard](https://dash.cloudflare.com/profile/api-tokens)
-2. Haz clic en "Create Token"
-3. Usa la plantilla "Edit zone DNS" o crea uno personalizado con los permisos:
-   - Zone > DNS > Edit
-   - Zone > Zone > Read
-4. Copia el token generado y agrégalo al archivo `.env`
-
-## Uso
-
-Ejecuta la aplicación:
+3. Run in development mode:
 
 ```bash
 bun start
 ```
 
-O en modo desarrollo con recarga automática:
+4. Build for production:
 
 ```bash
-bun dev
+bun run build
 ```
 
-### Flujo de uso
-
-1. La aplicación listará todos tus proyectos activos en Cloudflare
-2. Selecciona el proyecto que quieres gestionar
-3. Se mostrarán todos los registros DNS que tienen el proxy de Cloudflare activo
-4. Selecciona los registros que quieres cambiar a "DNS only" (sin proxy)
-5. Confirma la acción
-6. Los registros seleccionados se actualizarán para apuntar directamente al host original
-
-## ¿Qué hace exactamente?
-
-Cuando desactivas el proxy de Cloudflare en un registro DNS:
-- El tráfico ya no pasa por los servidores de Cloudflare
-- La IP real del servidor queda expuesta
-- Se pierden las protecciones DDoS y el CDN de Cloudflare
-- El registro DNS funciona como un DNS tradicional (DNS only)
-
-Esto es útil cuando necesitas:
-- Conectar servicios que requieren la IP directa
-- Debugging de problemas de red
-- Configuraciones especiales que no funcionan con el proxy
-
-⚠️ Ten en cuenta que el cambio puede tomar minutos en propagarse.
-
-## Estructura del proyecto
+## Project structure
 
 ```
 .
-├── index.ts         # Aplicación principal
-├── package.json     # Dependencias y scripts
-├── .env            # Variables de entorno (no incluido en git)
-├── tsconfig.json   # Configuración de TypeScript
-└── README.md       # Este archivo
+├── index.ts         # Main application
+├── i18n.ts         # Internationalization (ES/EN)
+├── types.ts        # TypeScript interfaces
+├── package.json    # Dependencies and scripts
+├── tsconfig.json   # TypeScript configuration
+└── README.md       # This file
 ```
 
-## Seguridad
+## Security
 
-⚠️ **Importante:** Nunca compartas tu token de Cloudflare. El archivo `.env` debe estar en `.gitignore`.
+⚠️ **Important:** Never share your Cloudflare token. Keep `.env` in `.gitignore`.
 
-## Licencia
+## License
 
 MIT
 
+## Author
+
+Created by [midudev](https://github.com/midudev)
+
 ---
 
-Creado con ❤️ usando [Bun](https://bun.com) y [@clack/prompts](https://github.com/natemoo-re/clack)
+Built with ❤️ using [@clack/prompts](https://github.com/natemoo-re/clack)
