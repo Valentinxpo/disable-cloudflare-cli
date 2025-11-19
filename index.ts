@@ -154,7 +154,7 @@ async function main() {
   if (!cloudflareToken) {
     const token = await requestToken()
     const isValid = await validateToken(token)
-    
+
     if (!isValid) {
       p.cancel(messages.tokenInvalid)
       process.exit(1)
